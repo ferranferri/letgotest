@@ -15,6 +15,7 @@ import java.util.Map;
 public class ChromeDriverHelper {
     private static final String CHROMEDRIVER_LINUX_PATH = "/src/test/resources/com/letgo/test/letgofrontpage/chromedriver/chromedriver_linux64";
     private static final String CHROMEDRIVER_MACOS_PATH = "/src/test/resources/com/letgo/test/letgofrontpage/chromedriver/chromedriver_macos64";
+    private static final String CHROMEDRIVER_WINDOWS_PATH = "/src/test/resources/com/letgo/test/letgofrontpage/chromedriver/chromedriver.exe";
     private static boolean is_running;
     private static WebDriver driver;
     private static ChromeDriverService service;
@@ -35,6 +36,9 @@ public class ChromeDriverHelper {
         }
         if (SystemUtils.IS_OS_MAC_OSX) {
             chromeDriverPath = System.getProperty("user.dir") + CHROMEDRIVER_MACOS_PATH;
+        }
+        if (SystemUtils.IS_OS_WINDOWS) {
+            chromeDriverPath = System.getProperty("user.dir") + CHROMEDRIVER_WINDOWS_PATH;
         }
         service = new ChromeDriverService.Builder()
                 .usingDriverExecutable(new File(chromeDriverPath))

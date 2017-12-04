@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/letgoaccesstest.iml" filepath="$PROJECT_DIR$/letgoaccesstest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/letgotest.iml" filepath="$PROJECT_DIR$/.idea/modules/letgotest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/letgotest_main.iml" filepath="$PROJECT_DIR$/.idea/modules/letgotest_main.iml" group="letgotest" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/letgotest_test.iml" filepath="$PROJECT_DIR$/.idea/modules/letgotest_test.iml" group="letgotest" />

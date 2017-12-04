@@ -9,6 +9,7 @@ import cucumber.api.java.en.Then;
 import org.openqa.selenium.WebDriver;
 
 import java.io.IOException;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class AddUserAndSearchItem {
@@ -34,6 +35,12 @@ public class AddUserAndSearchItem {
 
         frontPage.getUpdateLocationWindow().stayAtUS();
         frontPage.clickLoginButton();
+        frontPage.getLoginDialog().clickSignUpButton();
+        Random random = new Random();
+        String generatedEmail = "letgouser" + random.nextInt(1000000) + "@mailprovider.com";
+        frontPage.getLoginDialog().insertEmail(generatedEmail);
+        frontPage.getLoginDialog().insertPassword("12345");
+        frontPage.getLoginDialog().clickContinueButton();
         Thread.sleep(2000);
         frontPage.close();
     }
