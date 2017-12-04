@@ -11,4 +11,3 @@ Feature: You can set a custom char that replaces detected words
       | puta                        | ~                   | Puta locura                   | ~~~~ locura                   |
       | puta                        | -                   | PuTA basura                   | ---- basura                   |
       | puta                        | =                   | PUUUUUUUUTAAAAAAA basura      | ==== basura                   |
-      | puta                        | '                   | P.U.T.A basura                | '''' basura                   |
