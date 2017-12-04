@@ -11,7 +11,7 @@ import org.openqa.selenium.WebDriver;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-public class MyStepdefs {
+public class AddUserAndSearchItem {
 
     private WebDriver driver;
 
@@ -32,7 +32,8 @@ public class MyStepdefs {
         FrontPage frontPage = new FrontPage(driver);
         frontPage.open();
 
-        frontPage.selectButton();
+        frontPage.getUpdateLocationWindow().stayAtUS();
+        frontPage.clickLoginButton();
         Thread.sleep(2000);
         frontPage.close();
     }

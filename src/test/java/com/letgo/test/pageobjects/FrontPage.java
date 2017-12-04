@@ -24,16 +24,19 @@ public class FrontPage {
         driver.get(FRONT_PAGE_URL);
     }
 
-    public void selectButton() {
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[data-test='update-location-cancel']")));
-        //WebElement searchBox = driver.findElement(By.cssSelector("button[data-test='update-location-cancel']"));
-        String a = element.getText();
-        element.click();
-
+    public UpdateLocationDialog getUpdateLocationWindow() throws InterruptedException {
+        UpdateLocationDialog updateLocationDialog = new UpdateLocationDialog(this.driver);
+        return updateLocationDialog;
     }
 
     public void close() {
         driver.quit();
+    }
+
+    public void clickLoginButton() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[data-test='login']")));
+        Thread.sleep(500);
+        element.click();
     }
 }
