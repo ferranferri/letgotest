@@ -33,7 +33,20 @@ public class LoginDialog {
         element.sendKeys(password);
     }
 
+    public void insertFullName(String name) throws InterruptedException {
+        Thread.sleep(500);
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(By.name("name")));
+        element.sendKeys(name);
+    }
+
     public void clickContinueButton() throws InterruptedException {
+        Thread.sleep(500);
+        WebElement element = driver.findElement(By.cssSelector("button[data-test='login-email-submit']"));
+        element.click();
+    }
+
+    public void clickCompleteSignUpButton() throws InterruptedException {
         Thread.sleep(500);
         WebElement element = driver.findElement(By.cssSelector("button[data-test='login-email-submit']"));
         element.click();

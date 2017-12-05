@@ -42,4 +42,11 @@ public class FrontPage {
         Thread.sleep(500);
         element.click();
     }
+
+    public void makeSearch(String searchTerm) throws InterruptedException {
+        Thread.sleep(500);
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(By.name("searchField")));
+        element.sendKeys(searchTerm);
+    }
 }

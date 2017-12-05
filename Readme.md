@@ -58,3 +58,13 @@ JUnit as utility class for assertions.
 
 
 ## Question 4
+I'm not very happy with this part. Although Question 1 says "As a non registered user, I want to search for an item”, question 4 talks about
+"You are in charge of automate the email (make sure to use the email option) account creation process". When I tried to automate sign up, I didn't be able to make my way through captcha in every moment, so test fails from time to time
+
+Nevertheless, I send you the code I made that fills email and password fields and fills search bar. Is designed following the pattern Page Object.
+I didn't used FindBy annotations because I don't what to expect about the order elements appears in page, so in most cases I simply use WebDriverWait or simply Thread.sleep.
+
+Execute it in project root:
+```
+./gradlew letgofrontpage_test
+```
