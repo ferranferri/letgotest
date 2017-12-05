@@ -11,6 +11,14 @@ You don't need any further setup after extract the code.
 ## Question 1
 
 ## Question 2
+To: Laura
+Hi Laura,
+I think I cannot make much with the information you gave me. Please, could you clarify
+ - The url to test
+ - The final localization to go (Need I change from US to Spain?)
+ - Do I need to filter search?
+
+
 
 ## Question 3 Automated API testing
 #### Execution
